@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVA</title>
+</head>
+
+<body>
+    <p>PRIX HT<input type="text" id="pHT"></p>
+    <p>Taux de TVA
+        <button id="btn1">2.1</button>
+        <button id="btn2">5.5</button>
+        <button id="btn3">10</button>
+        <button id="btn4">20</button>
+    </p>
+    <p>TVA<strong id="TVAr"></strong></p>
+    <p>TTC<strong id="TTCr"></strong></p>
+
+    <script>
+        let PrixHT = document.getElementById("pHT")
+        let TVAr = document.getElementById("TVAr")
+        let TTCr = document.getElementById("TTCr")
+
+        let Btn1 = document.getElementById("btn1")
+        let Btn2 = document.getElementById("btn2")
+        let Btn3 = document.getElementById("btn3")
+        let Btn4 = document.getElementById("btn4")
+
+        Btn1.onclick = function () {
+            let TvaT = Number(PrixHT.value) * 2.1 / 100;
+            let TtcT = Number(PrixHT.value) + TvaT;
+
+            TVAr.innerHTML = TvaT.toFixed(2)
+            TTCr.innerHTML = TtcT.toFixed(2)
+        }
+        Btn2.onclick = function () {
+            let TvaT = Number(PrixHT.value) * 5.5 / 100;
+            let TtcT = Number(PrixHT.value) + TvaT;
+
+            TVAr.innerHTML = TvaT.toFixed(2)
+            TTCr.innerHTML = TtcT.toFixed(2)
+        }
+        Btn3.onclick = function () {
+            let TvaT = Number(PrixHT.value) * 10 / 100;
+            let TtcT = Number(PrixHT.value) + TvaT;
+
+            TVAr.innerHTML = TvaT.toFixed(2)
+            TTCr.innerHTML = TtcT.toFixed(2)
+        }
+        Btn4.onclick = function () {
+            let TvaT = Number(PrixHT.value) * 20 / 100;
+            let TtcT = Number(PrixHT.value) + TvaT;
+
+            TVAr.innerHTML = TvaT.toFixed(2)
+            TTCr.innerHTML = TtcT.toFixed(2)
+        }
+    </script>
+</body>
+
+</html>
